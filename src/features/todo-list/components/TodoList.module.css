@@ -1,0 +1,138 @@
+.todoList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.todoForm {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.todoFormLabel {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.todoFormRow {
+    display: flex;
+    gap: 8px;
+}
+
+.todoInput {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--foreground);
+    font: inherit;
+}
+
+.createButton,
+.deleteButton {
+    border: 0;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.createButton {
+    padding: 12px 18px;
+    background: #1d4ed8;
+    color: #ffffff;
+}
+
+.deleteButton {
+    padding: 8px 12px;
+    background: transparent;
+    color: #b91c1c;
+}
+
+.todoError {
+    margin: 0;
+    color: #b91c1c;
+    font-size: 14px;
+}
+
+.emptyTodoList {
+    margin: 0;
+    padding: 24px;
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    color: var(--muted);
+    text-align: center;
+}
+
+.todoItems {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.todoItem,
+.todoItemCompleted {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.todoItem {
+    background: var(--incomplete-bg);
+    border-left: 4px solid var(--incomplete);
+}
+
+.todoItemCompleted {
+    background: var(--completed-bg);
+    border-left: 4px solid var(--completed);
+}
+
+.todoLabel {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+}
+
+.todoCheckbox {
+    margin-top: 4px;
+}
+
+.todoTitle {
+    overflow-wrap: anywhere;
+}
+
+.todoItemCompleted .todoTitle {
+    color: var(--completed);
+    text-decoration: line-through;
+}
+
+.statusIncomplete,
+.statusCompleted {
+    flex-shrink: 0;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.statusIncomplete {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.statusCompleted {
+    background: #e5e7eb;
+    color: #4b5563;
+}
